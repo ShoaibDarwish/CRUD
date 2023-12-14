@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ^-->
+    <link name="author" content="Shoaib Darwish" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link name="description" content="" />
+    <link rel="icon" href="" />
+    <!-- ^bootstrab -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ^font icon css -->
+    <link rel="stylesheet" href="css/fontello.css">
+   
+       <!-- ^font css -->
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+
+
+
+    <!-- ^main css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>CRUD Operatons</title>
+  </head>
+  <body>
+    
+    <section>
+      <div class="login-box">
+      <form action="">
+          <h2>Login</h2>
+          <div class="input-box">
+          <input type="text" required id="name">
+          <label for="name">Name</label>
+          </div>
+          <div class="input-box">
+          <input type="password" required id="password">
+          <label for="password">Password</label>
+          </div>
+          <div class="remember-forget">
+              <label for="reme"><input id="reme" type="checkbox" class="rememberme">Remember</label>
+              <a href="#">Forgot Password</a>
+              <button type="submit">Login</button>
+              <div class="register-link">
+                  <p>Dont't have an account ?<a href="#"><span class="register">Register</span></a></p>
+              </div>
+          </div>
+      </form>
+      </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+     <div class="container py-4 my-5 ">
+      <div class="overlay">
+        <div class="dot dotOne"></div>
+        <div class="dot dotTwo"></div>
+        <div class="dot dotThree"></div> 
+        <div class="clear"></div>
+    
+        <div class="form-group mx-5">
+          <input  oninput="searchProduct()" class="form-control" type="search" id="searchInput">
+          <label for="searchInput" class= "h4 text-white" ><i class="icon-search"></i>Search</label>
+        </div> 
+      <div class="w-50 mx-auto my-5 ">
+        <h3 class="text-white">Product Mangement System</h3>
+        <div class="form-group mb-3 ">
+          <input oninput="productNameValidation()" type="text" class="form-control" id="productName" />
+          <label for="productName">Product Name</label>
+          <div class="alert alert-danger d-none" id="nameErorr">It must start with <span class="boldSpan">C</span>apital letter and not less than <span class="boldSpan">8</span> characters</div>
+        </div>
+        <div class="form-group mb-3">
+          <input oninput="priceValidation()" type="text" class="form-control" id="productPrice" />
+          <label for="productPrice">Product Price</label>
+          <div class="alert alert-danger d-none" id="priceErorr">It must be more than or equal <span class="boldSpan">10,000</span> and and less than or equal <span class="boldSpan">50,000</span> </div>
+
+        </div>
+        <div class="form-group mb-3">
+          <input oninput="categoryValidation()" type="text" class="form-control" id="productCategory" />
+          <label for="productCategory">Product Category</label>
+          <div class="alert alert-danger d-none" id="categoryErorr">It must be content '<span class="boldSpan">tv</span> or <span class="boldSpan">phone</span> or <span class="boldSpan">laptop</span> ' beacuse those are our prodaucts</div>
+
+        </div>
+        <div class="form-group mb-3">
+          <textarea oninput="descripthionValidation()" class="form-control" id="productDescription" style="resize: none;" ></textarea>
+          <label for="productDescription">Product Description</label>
+          <div class="alert alert-danger d-none" id="descriptionErorr">It must be content more than <span class="boldSpan">5</span> characters to <span class="boldSpan">100</span> not more than else</div>
+
+        </div>
+
+        <button  class="btn btn-outline-info " onclick="addProduct()" id="myBtn">Add Product</button>
+      </div>
+
+<table class="w-50 mx-auto  py-5 ">
+  <thead >
+    <th>Index</th>
+    <th>ProductName</th>
+    <th>ProductPrice</th>
+    <th>ProductCategory</th>
+    <th>ProductDescription</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </thead>
+  <tbody id="myBody" >
+
+  </tbody>
+</table>
+
+  
+</div>
+    </div>
+
+
+
+
+    <div class="video-bg">
+      <video autoplay loop muted>
+       <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+     </video>
+     </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
